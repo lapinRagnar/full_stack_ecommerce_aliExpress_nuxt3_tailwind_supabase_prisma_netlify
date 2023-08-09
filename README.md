@@ -61,3 +61,13 @@ yarn preview
 ```
 
 Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+
+# site du tutoriel
+https://www.youtube.com/watch?v=dVcCRFVhz74
+
+# les commandes pour le setups de l'application - installation de la dependance
+ 
+ > npm create vite@latest 2_full_stack_ecommerce_aliExpress_nuxt3_tailwind_supabase_prisma_netlify --template vue
+ 
+ > npm i @nuxtjs/supabase @nuxtjs/tailwindcss nuxt-icon @pinia-plugin-persistedstate/nuxt @pinia/nuxt @prisma/client @stripe/stripe-js nuxt-lodash prisma stripe
+
