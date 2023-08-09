@@ -65,6 +65,10 @@ Check out the [deployment documentation](https://nuxt.com/docs/getting-started/d
 # site du tutoriel
 https://www.youtube.com/watch?v=dVcCRFVhz74
 
+# github du tuto
+https://github.com/John-Weeks-Dev/aliexpress-clone
+
+
 # les commandes pour le setups de l'application - installation de la dependance
  
  > npm create vite@latest 2_full_stack_ecommerce_aliExpress_nuxt3_tailwind_supabase_prisma_netlify --template vue
