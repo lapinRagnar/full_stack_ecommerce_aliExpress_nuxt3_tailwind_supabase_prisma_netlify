@@ -14,7 +14,9 @@
   "devDependencies": {
     "@nuxt/devtools": "latest",
     "@types/node": "^18.17.3",
-    "nuxt": "^3.6.5"
+    "nuxt": "^3.6.5",
+    "sass": "^1.64.2",
+    "sass-loader": "^13.3.2"
   },
   "dependencies": {
     "@nuxtjs/supabase": "^1.0.2",
