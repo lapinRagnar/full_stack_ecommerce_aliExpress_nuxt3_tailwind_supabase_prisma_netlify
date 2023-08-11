@@ -75,3 +75,14 @@ https://github.com/John-Weeks-Dev/aliexpress-clone
  
  > npm i @nuxtjs/supabase @nuxtjs/tailwindcss nuxt-icon @pinia-plugin-persistedstate/nuxt @pinia/nuxt @prisma/client @stripe/stripe-js nuxt-lodash prisma stripe
 
+
+# supabase configuration
+
+teny miafina ny supabase = Lapinragnar%%%
+
+### les commandes pour prisma
+> npx prisma init
+> npx prisma generate
+> npx prisma migrate dev --name init
+> npx prisma db seed
+
