@@ -86,3 +86,10 @@ teny miafina ny supabase = Lapinragnar%%%
 > npx prisma migrate dev --name init
 > npx prisma db seed
 
+apres la prochaine fois on fait ca pour reinitialiser la bdd
+> npx prisma generate
+> npx prisma reset
+
+# google cloud pour la gestion des auth
+https://console.cloud.google.com/welcome?hl=fr&pli=1&project=authentication-tuto-47f89
+

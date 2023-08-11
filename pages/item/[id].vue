@@ -24,9 +24,9 @@
         </div>
 
         <div class="md:w-[60%] bg-white p-3 rounded-lg">
-          <div v-if="true">
-            <p class="mb-2">Title</p>
-            <p class="font-light text-[12px] mb-2">Description Section</p>
+          <div v-if="product && product.data">
+            <p class="mb-2">{{ product.data.title }}</p>
+            <p class="font-light text-[12px] mb-2">{{ product.data.description }}</p>
           </div>
           <div class="flex items-center pt-1.5">
             <span class="h-4 min-w-4 rounded-full bg-[#FFD000] mr-2">
@@ -95,9 +95,14 @@
   import { useUserStore } from '~/stores/user';
   const userStore = useUserStore()
 
+  let product = ref(null)
   const route = useRoute()
   
   let currentImage = ref(null)
+
+  onBeforeMount(async () => {
+    product.value = await useFetch(`/api/prisma/get-product-by-id/${route.params.id}`)
+  })
 
   onMounted(() => {
     watchEffect(() => {
@@ -106,8 +111,19 @@
     })
   })
 
+  watchEffect(() => {
+    if (product.value && product.value.data) {
+      currentImage.value = product.value.data.url
+      images.value[0] = product.value.data.url
+      userStore.isLoading = false
+    }
+  })
+
   const priceComputed = computed(() => {
-    return '26.40'
+    if (product.value && product.value.data) {
+      return product.value.data.price / 100
+    }
+    return '0.00'
   })
 
   const isInCart = computed(() => {
@@ -134,12 +150,8 @@
   ])
 
   const addToCart = () => {
-    alert('added')
-    // userStore.cart.push(product.value.data)
+    userStore.cart.push(product.value.data)
   }
 
 </script>
 
-<style lang="scss" scoped>
-
-</style>
